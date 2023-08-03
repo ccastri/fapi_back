@@ -1,9 +1,11 @@
 from typing import Union
 from fastapi import FastAPI
 from pydantic import BaseModel
+import hdv
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
 origins = [
     "http://localhost:3000",
 ]
@@ -23,7 +25,10 @@ class Item(BaseModel):
     is_offer: Union[bool, None] = None
 
 
-@app.get("/")
+app.include_router(hdv.router)
+
+
+@app.get("/api")
 def read_root():
     return {"Hello": "World"}
 
