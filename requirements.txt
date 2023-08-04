@@ -1,7 +1,9 @@
-fastapi "uvicorn[standard]"
-gunicorn
+fastapi 
+"uvicorn[standard]"
+# Driver of postgres
 psycopg2
+# ORM for DB management
 sqlalchemy
+# Another library for setting up python and postgres
 alembic
-"databases[postgresql]"
 python-dotenv
