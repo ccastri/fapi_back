@@ -9,6 +9,7 @@ from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
 router = APIRouter(prefix="/hdv", tags=["add"])
 
 
+# Got to fix this model to be on the hdv_sb_models.py
 class FormData(BaseModel):
     departamento: str
     municipio: str

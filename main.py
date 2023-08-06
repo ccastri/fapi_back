@@ -2,6 +2,7 @@ from typing import Union
 from fastapi import FastAPI
 from pydantic import BaseModel
 import hdv
+import users
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -27,6 +28,7 @@ class Item(BaseModel):
 
 
 app.include_router(hdv.router)
+app.include_router(users.router)
 
 
 @app.get("/api")

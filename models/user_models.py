@@ -1,14 +1,14 @@
-from dataclasses import dataclass
+from pydantic import BaseModel
 
 
-@dataclass
-class User:
-    empresa: str
+class UserRegister(BaseModel):
+    # id: int
+    company: str
     nit: str
-    ciudad: str
-    departamento: str
-    correo: str
-    contraseña: str
-    confirmarContraseña: str
+    city: str
+    department: str
+    email: str
+    password: str
+    password_confirm: str
     role: str
     tos: bool
