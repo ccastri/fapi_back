@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import Column, String, Boolean, Integer
 from sqlalchemy.ext.declarative import declarative_base
-from DB import session
+from ..DB import session
 from sqlalchemy import CheckConstraint
 
 Base = declarative_base()
